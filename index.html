@@ -4,14 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Parth | Personal Website</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    .portfolio-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: 0 auto;
+      max-width: 300px; /* Keep previous size */
+    }
+    .portfolio-item img {
+      width: 100%;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      <h1>Hello, I'm <span>Parth</span></h1>
+      <h1>Hi, I'm <span>Parth</span></h1>
       <p>I'm a computer science and statistics student at the University of Toronto.</p>
       <a href="#portfolio" class="btn">See My Work</a>
     </div>
@@ -21,7 +36,7 @@
   <section id="about" class="about">
     <div class="container">
       <h2>About Me</h2>
-      <p>I’m passionate about technology and its practical applications, especially in areas like backend development, data science, and machine learning. I also have a keen interest in the field of fintech.</p>
+      <p>I’m passionate about technology and its practical applications, especially in areas like backend development, data science, and machine learning. I also have a keen interest in fintech.</p>
     </div>
   </section>
 
@@ -29,41 +44,41 @@
   <section id="portfolio" class="portfolio">
     <div class="container">
       <h2>My Work</h2>
-      <div class="grid">
-        <div class="portfolio-item">
-          <img src="https://imgur.com/Ww701TW" alt="AR Museum">
-          <p>AR Museum</p>
-        </div>
-        <div class="portfolio-item">
-          <img src="https://via.placeholder.com/300x200" alt="Project 2">
-          <p>Project 2</p>
-        </div>
-        <div class="portfolio-item">
-          <img src="https://via.placeholder.com/300x200" alt="Project 3">
-          <p>Project 3</p>
-        </div>
+      <div class="portfolio-item">
+        <a href="https://github.com/mirasimali5005/DeerHacks.git" target="_blank">
+          <img src="https://i.imgur.com/Ww701TW.jpg" alt="AR Museum">
+        </a>
+        <p><a href="https://github.com/mirasimali5005/DeerHacks.git" target="_blank" style="color: black; text-decoration: none;">AR Museum</a></p>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
+  <!-- Socials Section -->
+  <section id="socials" class="socials">
     <div class="container">
-      <h2>Contact Me</h2>
-      <p>Feel free to reach out to me for any inquiries or collaboration opportunities!</p>
-      <a href="mailto:your-email@example.com" class="btn">Email Me</a>
+      <h2>Connect with Me</h2>
+      <div class="social-icons">
+        <a 
+           href="https://www.linkedin.com/in/parth-tyagi45" target="_blank" class="social-link">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/parthtyagi9" target="_blank" class="social-link">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://twitter.com/parthtyagi0909" target="_blank" class="social-link">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="https://discord.com/users/yourdiscordid" target="_blank" class="social-link">
+          <i class="fab fa-discord"></i>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
     <div class="container">
-      <div class="socials">
-        <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">Twitter</a>
-        <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">LinkedIn</a>
-        <a href="https://github.com/yourusername" target="_blank" class="social-icon">GitHub</a>
-      </div>
-      <p>&copy; 2025 Your Name</p>
+     parthtyagi9.github.io
     </div>
   </footer>
 
