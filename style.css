@@ -83,12 +83,10 @@ body {
   margin-bottom: 40px;
 }
 
-.portfolio-grid {
+.portfolio-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  margin: 0 auto;
 }
 
 .portfolio-item {
@@ -97,13 +95,10 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   width: 300px;
-  max-width: 100%;
 }
 
 .portfolio-item img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
   border-radius: 5px;
 }
 
@@ -115,10 +110,7 @@ body {
 .portfolio-item a {
   color: black;
   text-decoration: none;
-}
-
-.portfolio-item a:hover {
-  color: #f39c12;
+  display: block;
 }
 
 /* Socials Section */
@@ -165,14 +157,25 @@ footer p {
   font-size: 0.9rem;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .portfolio-grid {
+/* For smaller screens - keep side by side but with smaller items */
+@media (max-width: 700px) {
+  .portfolio-container {
+    gap: 15px;
+  }
+  
+  .portfolio-item {
+    width: 250px;
+  }
+}
+
+/* Only stack on very small screens */
+@media (max-width: 540px) {
+  .portfolio-container {
     flex-direction: column;
     align-items: center;
   }
   
   .portfolio-item {
-    width: 90%;
+    width: 300px;
   }
 }
