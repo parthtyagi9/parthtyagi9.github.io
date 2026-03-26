@@ -12,3 +12,4 @@ My personal portfolio website showcasing my work, projects, and experience.
 - Tailwind CSS
 - Framer Motion
 - Radix UI
+ 
