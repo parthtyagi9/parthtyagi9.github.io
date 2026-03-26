@@ -14,6 +14,23 @@
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // Restore the original SPA route after a GitHub Pages 404 redirect.
+      (function () {
+        var query = window.location.search;
+        if (!query || query.indexOf("?/") !== 0) return;
+
+        var decoded = query
+          .slice(2)
+          .split("&")
+          .map(function (part) {
+            return part.replace(/~and~/g, "&");
+          })
+          .join("?");
+
+        window.history.replaceState(null, "", "/" + decoded + window.location.hash);
+      })();
+    </script>
   </head>
 
   <body>
