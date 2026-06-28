@@ -110,6 +110,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <button onClick={() => scrollToSection("skills")} className="block w-full text-left py-2 text-sm text-foreground">Skills</button>
                 <button onClick={() => scrollToSection("contact")} className="block w-full text-left py-2 text-sm text-foreground">Contact</button>
                 <a href="https://github.com/parthtyagi9" target="_blank" rel="noopener noreferrer" className="block py-2 text-sm text-foreground">GitHub</a>
+                <div className="pt-2 border-t border-border flex items-center justify-between">
+                  <span className="text-sm text-muted-foreground">Theme</span>
+                  <ThemeToggle />
+                </div>
               </div>
             </div>
           )}
