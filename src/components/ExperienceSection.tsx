@@ -161,12 +161,12 @@ const ExperienceSection = () => {
                       <ChevronDown className="w-5 h-5 text-muted-foreground" />
                     </motion.div>
                   </div>
-                  <div className="flex items-center gap-2 mt-2 text-sm text-muted-foreground">
-                    <span>{exp.location}</span>
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mt-2 text-sm text-muted-foreground">
+                    <span className="whitespace-nowrap">{exp.location}</span>
                     <span className="text-border">·</span>
-                    <span>{exp.roles[0].dates}</span>
+                    <span className="whitespace-nowrap">{exp.roles[0].dates}</span>
                     {exp.roles.length > 1 && (
-                      <span className="px-2 py-0.5 bg-muted text-xs border border-border">
+                      <span className="whitespace-nowrap px-2 py-0.5 bg-muted text-xs border border-border">
                         +{exp.roles.length - 1} role
                       </span>
                     )}
