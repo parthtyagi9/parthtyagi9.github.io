@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import uoftLogo from "@/assets/university-of-toronto-logo.png";
+import lseLogo from "@/assets/LSE_Logo.svg.png";
 
 const EducationSection = () => {
   const ref = useRef(null);
@@ -13,6 +15,7 @@ const EducationSection = () => {
       field: "Computer Science, Stats and Applied Math",
       dates: "2023 – 2027",
       location: "Toronto, ON",
+      logo: uoftLogo,
     },
     {
       institution: "London School of Economics and Political Science",
@@ -24,6 +27,7 @@ const EducationSection = () => {
       ],
       dates: "2025",
       location: "London, UK",
+      logo: lseLogo,
     },
   ];
 
@@ -40,36 +44,60 @@ const EducationSection = () => {
           Education
         </motion.h2>
 
-        <div className="relative border-l-2 border-foreground ml-2">
+        <div className="grid grid-cols-1 gap-6">
           {educationData.map((edu, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
-              className={`relative pl-8 ${index < educationData.length - 1 ? 'pb-16' : ''}`}
+              className="border border-border bg-card transition-all duration-300 hover:shadow-lg hover:border-foreground/20"
             >
-              <div className="absolute -left-[9px] top-2 w-4 h-4 bg-foreground rounded-full" />
-
-              <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-2">
-                <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground">{edu.institution}</h3>
-                  <p className="text-foreground font-medium">{edu.degree}</p>
-                  {edu.field && <p className="text-muted-foreground text-sm">{edu.field}</p>}
+              <div className="p-6 flex gap-5">
+                {/* Institution logo */}
+                <div className="flex-shrink-0">
+                  <div className="w-14 h-14 md:w-16 md:h-16 border border-border overflow-hidden bg-white flex items-center justify-center p-1.5">
+                    <img
+                      src={edu.logo}
+                      alt={`${edu.institution} logo`}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
                 </div>
-                <div className="text-sm text-muted-foreground md:text-right shrink-0">
-                  <p>{edu.dates}</p>
-                  <p>{edu.location}</p>
+
+                {/* Details */}
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg md:text-xl font-bold text-foreground leading-tight">
+                    {edu.institution}
+                  </h3>
+                  <p className="font-medium text-foreground/80 mt-0.5">
+                    {edu.degree}
+                  </p>
+                  {edu.field && (
+                    <p className="text-sm text-muted-foreground mt-0.5">
+                      {edu.field}
+                    </p>
+                  )}
+                  <div className="flex items-center gap-2 mt-2 text-sm text-muted-foreground">
+                    <span>{edu.location}</span>
+                    <span className="text-border">·</span>
+                    <span>{edu.dates}</span>
+                  </div>
+
+                  {edu.courses && (
+                    <div className="mt-4 border-t border-border pt-3 space-y-1.5">
+                      {edu.courses.map((course, i) => (
+                        <p
+                          key={i}
+                          className="text-muted-foreground text-sm leading-relaxed pl-4 relative before:content-['–'] before:absolute before:left-0 before:text-muted-foreground/50"
+                        >
+                          {course}
+                        </p>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
-
-              {edu.courses && (
-                <div className="mt-3 space-y-1">
-                  {edu.courses.map((course, i) => (
-                    <p key={i} className="text-sm text-muted-foreground">– {course}</p>
-                  ))}
-                </div>
-              )}
             </motion.div>
           ))}
         </div>
