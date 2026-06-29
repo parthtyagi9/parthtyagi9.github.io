@@ -3,10 +3,17 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { Copy, Check } from "lucide-react";
 
-const useTypingEffect = (words: string[], typingSpeed = 100, deletingSpeed = 60, pauseTime = 1500) => {
+const useTypingEffect = (
+  words: string[],
+  typingSpeed = 100,
+  deletingSpeed = 60,
+  pauseTime = 1500,
+) => {
   const [displayText, setDisplayText] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
-  const [phase, setPhase] = useState<"typing" | "pausing" | "deleting">("typing");
+  const [phase, setPhase] = useState<"typing" | "pausing" | "deleting">(
+    "typing",
+  );
   const [charIndex, setCharIndex] = useState(0);
 
   useEffect(() => {
@@ -37,7 +44,15 @@ const useTypingEffect = (words: string[], typingSpeed = 100, deletingSpeed = 60,
         setPhase("typing");
       }
     }
-  }, [phase, charIndex, wordIndex, words, typingSpeed, deletingSpeed, pauseTime]);
+  }, [
+    phase,
+    charIndex,
+    wordIndex,
+    words,
+    typingSpeed,
+    deletingSpeed,
+    pauseTime,
+  ]);
 
   return displayText;
 };
@@ -64,23 +79,97 @@ const SyntaxHighlightedCode = () => {
 
   return (
     <code>
-      <span className={keyword}>const</span> <span className={variable}>parth</span> <span className={punctuation}>=</span> <span className={bracket}>{"{"}</span>{"\n"}
-      {"  "}<span className={property}>name</span><span className={punctuation}>:</span> <span className={string}>"Parth Tyagi"</span><span className={punctuation}>,</span>{"\n"}
-      {"  "}<span className={property}>location</span><span className={punctuation}>:</span> <span className={string}>"Toronto"</span><span className={punctuation}>,</span>{"\n"}
-      {"  "}<span className={property}>yearsOfExperience</span><span className={punctuation}>:</span> <span className={string}>"3+"</span><span className={punctuation}>,</span>{"\n"}
-      {"  "}<span className={property}>projectsBuilt</span><span className={punctuation}>:</span> <span className={string}>"15+"</span><span className={punctuation}>,</span>{"\n"}
-      {"  "}<span className={property}>university</span><span className={punctuation}>:</span> <span className={string}>"University of Toronto"</span><span className={punctuation}>,</span>{"\n"}
-      {"  "}<span className={property}>major</span><span className={punctuation}>:</span> <span className={arrayBracket}>[</span><span className={string}>"Computer Science"</span><span className={punctuation}>,</span> <span className={string}>"Applied Math"</span><span className={arrayBracket}>]</span><span className={punctuation}>,</span>{"\n"}
-      {"  "}<span className={property}>technologies</span><span className={punctuation}>:</span> <span className={arrayBracket}>[</span><span className={string}>"Python"</span><span className={punctuation}>,</span> <span className={string}>"Java"</span><span className={punctuation}>,</span> <span className={string}>"C"</span><span className={punctuation}>,</span> <span className={string}>"AWS"</span><span className={punctuation}>,</span> <span className={string}>"Docker"</span><span className={punctuation}>,</span> <span className={string}>"TensorFlow"</span><span className={punctuation}>,</span> <span className={string}>"PostgreSQL"</span><span className={arrayBracket}>]</span><span className={punctuation}>,</span>{"\n"}
-      {"  "}<span className={property}>skills</span><span className={punctuation}>:</span> <span className={arrayBracket}>[</span><span className={string}>"Backend Development"</span><span className={punctuation}>,</span> <span className={string}>"Machine Learning"</span><span className={punctuation}>,</span> <span className={string}>"Data Engineering"</span><span className={punctuation}>,</span> <span className={string}>"Full Stack"</span><span className={arrayBracket}>]</span>{"\n"}
-      <span className={bracket}>{"}"}</span><span className={punctuation}>;</span>
+      <span className={keyword}>const</span>{" "}
+      <span className={variable}>parth</span>{" "}
+      <span className={punctuation}>=</span>{" "}
+      <span className={bracket}>{"{"}</span>
+      {"\n"}
+      {"  "}
+      <span className={property}>name</span>
+      <span className={punctuation}>:</span>{" "}
+      <span className={string}>"Parth Tyagi"</span>
+      <span className={punctuation}>,</span>
+      {"\n"}
+      {"  "}
+      <span className={property}>location</span>
+      <span className={punctuation}>:</span>{" "}
+      <span className={string}>"Toronto"</span>
+      <span className={punctuation}>,</span>
+      {"\n"}
+      {"  "}
+      <span className={property}>yearsOfExperience</span>
+      <span className={punctuation}>:</span>{" "}
+      <span className={string}>"3+"</span>
+      <span className={punctuation}>,</span>
+      {"\n"}
+      {"  "}
+      <span className={property}>projectsBuilt</span>
+      <span className={punctuation}>:</span>{" "}
+      <span className={string}>"15+"</span>
+      <span className={punctuation}>,</span>
+      {"\n"}
+      {"  "}
+      <span className={property}>university</span>
+      <span className={punctuation}>:</span>{" "}
+      <span className={string}>"University of Toronto"</span>
+      <span className={punctuation}>,</span>
+      {"\n"}
+      {"  "}
+      <span className={property}>major</span>
+      <span className={punctuation}>:</span>{" "}
+      <span className={arrayBracket}>[</span>
+      <span className={string}>"Computer Science"</span>
+      <span className={punctuation}>,</span>{" "}
+      <span className={string}>"Applied Math"</span>
+      <span className={arrayBracket}>]</span>
+      <span className={punctuation}>,</span>
+      {"\n"}
+      {"  "}
+      <span className={property}>technologies</span>
+      <span className={punctuation}>:</span>{" "}
+      <span className={arrayBracket}>[</span>
+      <span className={string}>"Python"</span>
+      <span className={punctuation}>,</span>{" "}
+      <span className={string}>"Java"</span>
+      <span className={punctuation}>,</span> <span className={string}>"C"</span>
+      <span className={punctuation}>,</span>{" "}
+      <span className={string}>"AWS"</span>
+      <span className={punctuation}>,</span>{" "}
+      <span className={string}>"Docker"</span>
+      <span className={punctuation}>,</span>{" "}
+      <span className={string}>"TensorFlow"</span>
+      <span className={punctuation}>,</span>{" "}
+      <span className={string}>"PostgreSQL"</span>
+      <span className={arrayBracket}>]</span>
+      <span className={punctuation}>,</span>
+      {"\n"}
+      {"  "}
+      <span className={property}>skills</span>
+      <span className={punctuation}>:</span>{" "}
+      <span className={arrayBracket}>[</span>
+      <span className={string}>"Backend Development"</span>
+      <span className={punctuation}>,</span>{" "}
+      <span className={string}>"Machine Learning"</span>
+      <span className={punctuation}>,</span>{" "}
+      <span className={string}>"Data Engineering"</span>
+      <span className={punctuation}>,</span>{" "}
+      <span className={string}>"Full Stack"</span>
+      <span className={arrayBracket}>]</span>
+      {"\n"}
+      <span className={bracket}>{"}"}</span>
+      <span className={punctuation}>;</span>
     </code>
   );
 };
 
 const HeroSection = () => {
   const [copied, setCopied] = useState(false);
-  const typedText = useTypingEffect(["Parth Tyagi", "Developer", "Engineer"], 100, 60, 1500);
+  const typedText = useTypingEffect(
+    ["Parth Tyagi", "Developer", "Engineer"],
+    100,
+    60,
+    1500,
+  );
 
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -113,7 +202,10 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            I build full-stack systems, data-driven applications, and AI-powered tools. Interested in machine learning, systems programming, and quantitative finance.
+            I'm a CS and Stats student at the University of Toronto. I've
+            completed 15+ projects and 2 internships spanning full-stack
+            development, machine learning, quantitative finance, and systems
+            programming, with a focus on AI/ML.
           </motion.p>
 
           <motion.div
@@ -152,14 +244,20 @@ const HeroSection = () => {
                 <div className="w-3 h-3 rounded-full bg-[#febc2e]" />
                 <div className="w-3 h-3 rounded-full bg-[#28c840]" />
               </div>
-              <span className="text-xs text-[#808080] font-mono ml-2">parth.ts</span>
+              <span className="text-xs text-[#808080] font-mono ml-2">
+                parth.ts
+              </span>
             </div>
             <button
               onClick={handleCopy}
               className="text-[#808080] hover:text-[#d4d4d4] transition-colors p-1"
               aria-label="Copy code"
             >
-              {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+              {copied ? (
+                <Check className="w-4 h-4" />
+              ) : (
+                <Copy className="w-4 h-4" />
+              )}
             </button>
           </div>
           <pre className="p-4 overflow-x-auto text-sm font-mono leading-relaxed">
