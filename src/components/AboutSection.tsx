@@ -3,7 +3,6 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 
-
 const AboutSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -41,7 +40,11 @@ const AboutSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-muted-foreground leading-relaxed mb-8"
           >
-            I'm studying Computer Science and Statistics at the University of Toronto. I've completed 15+ projects spanning full-stack development, machine learning, and systems programming, with particular focus on AI, quantitative finance, and understanding how things work at a deep level.
+            I'm studying Computer Science and Statistics at the University of
+            Toronto. I've completed 15+ projects and 2 internships spanning
+            full-stack development, machine learning, and systems programming,
+            with particular focus on AI, quantitative finance, and understanding
+            how things work at a deep level.
           </motion.p>
 
           <motion.div
