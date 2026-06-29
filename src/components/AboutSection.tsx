@@ -57,7 +57,7 @@ const AboutSection = () => {
               variant="outline"
               size="sm"
               onClick={() => scrollToSection("experience")}
-              className="border-border hover:bg-muted"
+              className="border-border hover:bg-muted rounded-none"
             >
               View work
             </Button>
