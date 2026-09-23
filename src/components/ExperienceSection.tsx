@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react";
 import esyaLogo from "/src/assets/esya-logo.jpg";
 import cssclogo from "/src/assets/cssc-logo.png";
 import tempolight from "/src/assets/Tempo_light_logo.png";
-import tempodark from "/src/assets/Tempo_dark_logo.png";
+import tempodark from "/src/assets/tempo_dark_logo.png";
 
 const ExperienceSection = () => {
   const ref = useRef(null);
