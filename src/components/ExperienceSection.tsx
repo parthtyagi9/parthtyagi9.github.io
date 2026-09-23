@@ -1,15 +1,18 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
+import { useTheme } from "next-themes";
 import { ChevronDown } from "lucide-react";
 import esyaLogo from "/src/assets/esya-logo.jpg";
-import tempoLogo from "/src/assets/Tempo_logo.png";
 import cssclogo from "/src/assets/cssc-logo.png";
+import tempolight from "/src/assets/Tempo_light_logo.png";
+import tempodark from "/src/assets/Tempo_dark_logo.png";
 
 const ExperienceSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const { resolvedTheme } = useTheme();
 
   const experiences = [
     {
@@ -18,7 +21,7 @@ const ExperienceSection = () => {
       logo: (
         <img
           alt="Tempo Assist"
-          src={tempoLogo}
+          src={resolvedTheme === "dark" ? tempolight : tempodark}
           className="w-full h-full object-cover"
         />
       ),
@@ -27,13 +30,13 @@ const ExperienceSection = () => {
           title: "Software Engineer Intern",
           dates: "June 2026 – Present",
           bullets: [
-            "Owned end-to-end delivery of 5+ Kotlin/Spring Boot REST APIs, spanning controllers, DTOs, services, DAOs and validation",
-            "Deployed zero-downtime PostgreSQL migrations for 2M+ records across 4+ services using Flyway, dual writes, backfills, & triggers",
-            "Built CDC pipelines publishing 10K+ daily events via transactional outbox and SNS/SQS, reducing redundant updates by 35%",
-            "Optimized backend data-ingestion pipelines processing 25K+ records/minute using asynchronous, non-blocking Kotlin coroutines",
-            "Built React & TypeScript interfaces using React Query, hooks, and memoization, improving rendering performance by 30%",
-            "Added 120+ unit and integration tests, lifting coverage from 72% to 90% across API, migration, validation, and persistence layers",
-            "Built horizontally scalable AWS services with autoscaling, health checks, retries, and observability, maintaining 99.9% availability",
+            "Optimized high-throughput data pipelines processing 25K+ records/min using Kotlin coroutines and Redis caching",
+            "Designed transactional bulk-update workflows across 50K+ hierarchical records, enforcing cross-item validation and rollback",
+            "Built CDC pipelines publishing 10K+ daily events via transactional outbox and AWS SQS, reducing redundant updates by 35%",
+            "Deployed zero-downtime PostgreSQL migration across 5 microservices and 1M+ records using Flyway, dual-writes & backfills",
+            "Redesigned REST and gRPC endpoints into a unified transactional API, cutting downstream integration points by 60%",
+            "Shipped feature-flagged rollouts, permission gates & DB backfills, monitoring prod health via Datadog for stable releases",
+            "Built reusable TypeScript interfaces and data-fetching hooks with React Query, handling caching and background refetching",
           ],
         },
       ],
@@ -53,13 +56,11 @@ const ExperienceSection = () => {
           title: "Software Engineer Intern",
           dates: "Apr 2025 – Jul 2025",
           bullets: [
-            "Built FastAPI services for PII detection/anonymization using YAML + regex for ETL pipelines",
-            "Deployed dev/staging on AWS (ECS, S3, KMS) with Docker + GitHub Actions CI/CD",
-            "Improved batch processing ~25% with Redis-backed background jobs and faster S3 I/O",
-            "Added JWT auth and CloudWatch audit logging for secure access and debugging",
-            "Orchestrated S3-triggered ETL workflows using AWS Lambda",
-            "Expanded pytest coverage with synthetic data; improved F1 ~92% → ~96%",
-            "Implemented k-anonymity checks and privacy risk reports; documented in Confluence/Jira",
+            "Developed RESTful FastAPI web services to detect/anonymize PII using YAML and regex for ETL data pipelines",
+            "Built CI/CD pipelines with GitHub Actions and deployed dev/staging environments on AWS enabling horizontal scaling",
+            "Containerized backend services using Docker and Kubernetes and managed Terraform-based AWS infrastructure",
+            "Optimized large-batch ETL processing by ~25% using asynchronous Redis jobs and improved S3 I/O throughput",
+            "Wrote unit and integration tests with pytest and synthetic datasets, improving detection F1 score from ~92% to ~96%",
           ],
         },
       ],
