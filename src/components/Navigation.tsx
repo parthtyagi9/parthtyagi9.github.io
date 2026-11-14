@@ -27,7 +27,7 @@ const Navigation = () => {
             onClick={() => scrollToSection("hero")}
             className="text-xl font-bold text-primary hover:text-primary-glow transition-colors"
           >
-            Parth Tyagi
+            Prem Patel
           </button>
           
           <div className="hidden md:flex items-center space-x-8">

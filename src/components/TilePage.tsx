@@ -71,15 +71,15 @@ const useTypingEffect = (
 
 /* ─────────────────────── code block ─────────────────────── */
 
-const codeString = `const parth = {
-  name: "Parth Tyagi",
-  location: "Toronto",
-  yearsOfExperience: "3+",
-  projectsBuilt: "15+",
-  university: "University of Toronto",
-  major: ["Computer Science", "Applied Math"],
-  technologies: ["Python", "Java", "C", "AWS", "Docker", "TensorFlow", "PostgreSQL"],
-  skills: ["Backend Development", "Machine Learning", "Data Engineering", "Full Stack"]
+const codeString = `const prem = {
+  name: "Prem Patel",
+  location: "Brampton, ON",
+  yearsOfExperience: "1+",
+  projectsBuilt: "8+",
+  university: "University of Toronto Mississauga",
+  major: ["Computer Science", "Applied Statistics", "Minor: Mathematics"],
+  technologies: ["Python", "Java", "C", "AWS", "ROS", "OpenCV", "scikit-learn"],
+  skills: ["Machine Learning", "Robotics", "Data Engineering", "Full Stack", "Cloud"]
 };`;
 
 const SyntaxCode = () => {
@@ -92,15 +92,15 @@ const SyntaxCode = () => {
 
   return (
     <code className="text-[10px] sm:text-xs leading-relaxed">
-      <span className={kw}>const</span> <span className={vr}>parth</span> <span className={pn}>=</span> <span className={br}>{"{"}</span>
-      {"\n  "}<span className={vr}>name</span><span className={pn}>:</span> <span className={st}>"Parth Tyagi"</span><span className={pn}>,</span>
-      {"\n  "}<span className={vr}>location</span><span className={pn}>:</span> <span className={st}>"Toronto"</span><span className={pn}>,</span>
-      {"\n  "}<span className={vr}>yearsOfExperience</span><span className={pn}>:</span> <span className={st}>"3+"</span><span className={pn}>,</span>
-      {"\n  "}<span className={vr}>projectsBuilt</span><span className={pn}>:</span> <span className={st}>"15+"</span><span className={pn}>,</span>
-      {"\n  "}<span className={vr}>university</span><span className={pn}>:</span> <span className={st}>"University of Toronto"</span><span className={pn}>,</span>
-      {"\n  "}<span className={vr}>major</span><span className={pn}>:</span> <span className={ab}>[</span><span className={st}>"Computer Science"</span><span className={pn}>,</span> <span className={st}>"Applied Math"</span><span className={ab}>]</span><span className={pn}>,</span>
-      {"\n  "}<span className={vr}>technologies</span><span className={pn}>:</span> <span className={ab}>[</span><span className={st}>"Python"</span><span className={pn}>,</span> <span className={st}>"Java"</span><span className={pn}>,</span> <span className={st}>"C"</span><span className={pn}>,</span> <span className={st}>"AWS"</span><span className={pn}>,</span> <span className={st}>"..."</span><span className={ab}>]</span><span className={pn}>,</span>
-      {"\n  "}<span className={vr}>skills</span><span className={pn}>:</span> <span className={ab}>[</span><span className={st}>"Backend"</span><span className={pn}>,</span> <span className={st}>"ML"</span><span className={pn}>,</span> <span className={st}>"Data Eng"</span><span className={pn}>,</span> <span className={st}>"Full Stack"</span><span className={ab}>]</span>
+      <span className={kw}>const</span> <span className={vr}>prem</span> <span className={pn}>=</span> <span className={br}>{"{"}</span>
+      {"\n  "}<span className={vr}>name</span><span className={pn}>:</span> <span className={st}>"Prem Patel"</span><span className={pn}>,</span>
+      {"\n  "}<span className={vr}>location</span><span className={pn}>:</span> <span className={st}>"Brampton, ON"</span><span className={pn}>,</span>
+      {"\n  "}<span className={vr}>yearsOfExperience</span><span className={pn}>:</span> <span className={st}>"1+"</span><span className={pn}>,</span>
+      {"\n  "}<span className={vr}>projectsBuilt</span><span className={pn}>:</span> <span className={st}>"8+"</span><span className={pn}>,</span>
+      {"\n  "}<span className={vr}>university</span><span className={pn}>:</span> <span className={st}>"University of Toronto Mississauga"</span><span className={pn}>,</span>
+      {"\n  "}<span className={vr}>major</span><span className={pn}>:</span> <span className={ab}>[</span><span className={st}>"Computer Science"</span><span className={pn}>,</span> <span className={st}>"Applied Statistics"</span><span className={pn}>,</span> <span className={st}>"Minor: Mathematics"</span><span className={ab}>]</span><span className={pn}>,</span>
+      {"\n  "}<span className={vr}>technologies</span><span className={pn}>:</span> <span className={ab}>[</span><span className={st}>"Python"</span><span className={pn}>,</span> <span className={st}>"Java"</span><span className={pn}>,</span> <span className={st}>"C"</span><span className={pn}>,</span> <span className={st}>"AWS"</span><span className={pn}>,</span> <span className={st}>"ROS"</span><span className={pn}>,</span> <span className={st}>"OpenCV"</span><span className={ab}>]</span><span className={pn}>,</span>
+      {"\n  "}<span className={vr}>skills</span><span className={pn}>:</span> <span className={ab}>[</span><span className={st}>"Machine Learning"</span><span className={pn}>,</span> <span className={st}>"Robotics"</span><span className={pn}>,</span> <span className={st}>"Data Eng"</span><span className={pn}>,</span> <span className={st}>"Full Stack"</span><span className={ab}>]</span>
       {"\n"}<span className={br}>{"}"}</span><span className={pn}>;</span>
     </code>
   );
@@ -214,12 +214,9 @@ const skillCategories = [
 ];
 
 const projects = [
-  { title: "Stock options platform", description: "Full-stack options analytics with Black-Scholes, binomial pricing, and ML forecasting. Optimized NumPy computations, PostgreSQL, Redis caching, and Docker CI/CD.", tags: ["Python", "FastAPI", "React"], link: "https://github.com/parthtyagi9/ThetaStrike", accent: "from-amber-500/20 to-orange-500/10" },
-  { title: "Wellthify wellness app", description: "Full-stack AI platform delivering personalized fitness, diet, and health recommendations. Built with Flask and Node.js, integrated with Gemini and Google Cloud Text-to-Speech.", tags: ["Flask", "Node.js", "Cloud"], link: "https://github.com/parthtyagi9/wellthify", accent: "from-green-500/20 to-emerald-500/10" },
-  { title: "Shadow monster game", description: "Console adventure game built entirely in RISC-V assembly. Implements player movement, enemy AI, pseudorandom placement, and dynamic grid rendering with memory-efficient storage.", tags: ["RISC-V", "Assembly"], link: "https://github.com/parthtyagi9", accent: "from-red-500/20 to-rose-500/10" },
-  { title: "Scanalytics engine", description: "AI-powered analytics with FastAPI and multi-agent orchestration for automated KPI discovery. Translates business rules into PostgreSQL JSONB queries with structured Pydantic outputs.", tags: ["FastAPI", "Gemini", "PostgreSQL"], link: "https://github.com/parthtyagi9/Scanalytics", accent: "from-cyan-500/20 to-blue-500/10" },
-  { title: "Custom UNIX shell", description: "Unix-style shell in C replicating core Bash features including piping, background jobs, and signal handling. Implements fork/exec, POSIX sockets, and robust process management.", tags: ["C", "Unix", "Systems"], link: "https://github.com/parthtyagi9", accent: "from-slate-500/20 to-gray-500/10" },
-  { title: "AR museum dashboard", description: "React-based AR web app integrating Google OAuth, Google Maps API, and A-Frame/AR.js for location-based experiences. Stores AR elements in Firebase with optimized rendering.", tags: ["React", "A-Frame", "Firebase"], link: "https://github.com/parthtyagi9/ar-museum", accent: "from-purple-500/20 to-violet-500/10" },
+  { title: "AI-Powered Financial Insights Dashboard", description: "End-to-end financial forecasting and churn analysis using ML, SQL, and Tableau-driven business intelligence.", tags: ["Python", "SQL", "Scikit-learn", "Tableau"], link: "https://github.com/prempatel6288-spec/financial-insights-dashboard", accent: "from-amber-500/20 to-orange-500/10" },
+  { title: "Team Task Tracker", description: "Full-stack productivity app for agile collaboration with role-based task tracking and deployment-ready APIs.", tags: ["Node.js", "Angular", "TypeScript", "SQL"], link: "https://github.com/prempatel6288-spec/Taskflow", accent: "from-green-500/20 to-emerald-500/10" },
+  { title: "Self-Driving Car Motion Prediction", description: "Motion-prediction work on Waymo driving data using deep learning to model multi-agent future trajectories.", tags: ["Python", "PyTorch", "Waymo", "ML"], link: "https://github.com/prempatel6288-spec/DONUT-NLL", accent: "from-red-500/20 to-rose-500/10" },
 ];
 
 /* ─────────────────────── animated tile wrapper ─────────────────────── */
@@ -266,7 +263,7 @@ const TilePage = () => {
   const [projDialog, setProjDialog] = useState<number | null>(null);
   const { toast } = useToast();
 
-  const typedText = useTypingEffect(["Parth Tyagi", "Developer", "Engineer"], 100, 60, 1500);
+  const typedText = useTypingEffect(["Prem Patel", "ML Engineer", "Roboticist"], 100, 60, 1500);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(codeString);
@@ -275,8 +272,8 @@ const TilePage = () => {
   };
 
   const copyDiscord = () => {
-    navigator.clipboard.writeText("parth_45");
-    toast({ title: "Copied!", description: "parth_45 copied to clipboard." });
+    navigator.clipboard.writeText("prempatel");
+    toast({ title: "Copied!", description: "prempatel copied to clipboard." });
   };
 
   return (
@@ -304,7 +301,7 @@ const TilePage = () => {
               </p>
               <div className="flex gap-3 mt-6">
                 <motion.a
-                  href="https://github.com/parthtyagi9"
+                  href="https://github.com/prempatel6288-spec"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
@@ -314,7 +311,7 @@ const TilePage = () => {
                   <Github className="w-4 h-4" /> GitHub
                 </motion.a>
                 <motion.a
-                  href="https://linkedin.com/in/parth-tyagi45"
+                  href="https://www.linkedin.com/in/prem-patel-b88a86319/"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
@@ -336,7 +333,7 @@ const TilePage = () => {
                   <div className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
                   <div className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
                 </div>
-                <span className="text-[10px] text-white/30 font-mono ml-2">parth.ts</span>
+                <span className="text-[10px] text-white/30 font-mono ml-2">prem.ts</span>
               </div>
               <button
                 onClick={handleCopy}
@@ -490,16 +487,16 @@ const TilePage = () => {
                   {
                     icon: <Mail className="w-5 h-5" />,
                     label: "Email",
-                    value: "parthtyagi1204",
-                    href: "mailto:parthtyagi1204@gmail.com",
+                    value: "prempatel",
+                    href: "mailto:prem.patel@mail.utoronto.ca",
                     color: "from-blue-500/20 to-blue-600/10",
                     hoverBorder: "hover:border-blue-500/30",
                   },
                   {
                     icon: <Linkedin className="w-5 h-5" />,
                     label: "LinkedIn",
-                    value: "parth-tyagi45",
-                    href: "https://linkedin.com/in/parth-tyagi45",
+                    value: "prem-patel-b88a86319",
+                    href: "https://www.linkedin.com/in/prem-patel-b88a86319/",
                     color: "from-sky-500/20 to-sky-600/10",
                     hoverBorder: "hover:border-sky-500/30",
                     external: true,
@@ -507,8 +504,8 @@ const TilePage = () => {
                   {
                     icon: <Github className="w-5 h-5" />,
                     label: "GitHub",
-                    value: "parthtyagi9",
-                    href: "https://github.com/parthtyagi9",
+                    value: "prempatel6288-spec",
+                    href: "https://github.com/prempatel6288-spec",
                     color: "from-gray-500/20 to-gray-600/10",
                     hoverBorder: "hover:border-gray-400/30",
                     external: true,
@@ -516,7 +513,7 @@ const TilePage = () => {
                   {
                     icon: <SiDiscord className="w-5 h-5" />,
                     label: "Discord",
-                    value: "parth_45",
+                    value: "prempatel",
                     color: "from-indigo-500/20 to-indigo-600/10",
                     hoverBorder: "hover:border-indigo-500/30",
                     isDiscord: true,
@@ -578,7 +575,7 @@ const TilePage = () => {
               </div>
             </div>
             <motion.a
-              href="https://github.com/parthtyagi9"
+              href="https://github.com/prempatel6288-spec"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
@@ -626,7 +623,7 @@ const TilePage = () => {
         {/* Footer */}
         <div className="text-center py-4">
           <p className="text-[11px] text-muted-foreground/50">
-            © {new Date().getFullYear()} Parth Tyagi
+            © {new Date().getFullYear()} Prem Patel
           </p>
         </div>
       </div>

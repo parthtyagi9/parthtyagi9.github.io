@@ -2,9 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
-import esyaLogo from "/src/assets/esya-logo.jpg";
-import tempoLogo from "/src/assets/Tempo_logo.png";
-import cssclogo from "/src/assets/cssc-logo.png";
+import scotiabankLogo from "@/assets/scotiabank-logo.png";
 
 const ExperienceSection = () => {
   const ref = useRef(null);
@@ -18,8 +16,8 @@ const ExperienceSection = () => {
       logo: (
         <img
           alt="Scotiabank"
-          src={tempoLogo}
-          className="w-full h-full object-cover"
+          src={scotiabankLogo}
+          className="w-full h-full object-contain bg-white"
         />
       ),
       roles: [
@@ -27,11 +25,28 @@ const ExperienceSection = () => {
           title: "Data Engineer & ML Modeller",
           dates: "Nov 2025 – Mar 2026",
           bullets: [
-            "Engineered 20+ features from 5.9M transactions across 7 banking channels for ~61K customers, including velocity, structuring signals, and KYC-derived ratios to surface AML risk patterns",
-            "Built and evaluated scalable ML detection models (Isolation Forest, XGBoost, Random Forest) under severe label scarcity and class imbalance, optimizing for AUPRC over accuracy",
-            "Applied SHAP to generate explainable AI outputs linking model risk scores to AML red flags from FINTRAC/FinCEN; collaborated in a 5-member agile team with hand-off-ready, reproducible pipelines",
-            "Automated data pipeline for transaction preprocessing, feature extraction, and model inference reducing manual effort by 40%",
-            "Documented model assumptions and limitations for business stakeholders; created Jira tickets for ongoing model monitoring and drift detection",
+            "Surfaced AML risk patterns across 5.9M transactions and ~61K customers by engineering 20+ features including velocity, structuring signals, and KYC ratios.",
+            "Detected suspicious activity under severe class imbalance, optimizing AUPRC, by building Isolation Forest, XGBoost, and Random Forest models.",
+            "Made risk scores explainable for a 5-member agile team by applying SHAP to FINTRAC/FinCEN red flags and delivering reproducible pipelines.",
+          ],
+        },
+      ],
+    },
+    {
+      company: "UofT Robotics Club",
+      location: "Toronto, ON",
+      logo: (
+        <div className="w-full h-full flex items-center justify-center bg-white text-2xl font-black text-red-600">
+          UofT
+        </div>
+      ),
+      roles: [
+        {
+          title: "Software Developer",
+          dates: "Sept 2024 – Present",
+          bullets: [
+            "Cut setup time by 33% across 8 TurtleBots by configuring a ROS stack on Raspberry Pi for remote operation and started building visual SLAM.",
+            "Reached 85% object detection accuracy on a 6-DOF robotic arm by implementing inverse kinematics on Arduino and integrating OpenCV with Xbox Kinect.",
           ],
         },
       ],

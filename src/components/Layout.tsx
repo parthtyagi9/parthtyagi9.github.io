@@ -38,7 +38,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   onClick={() => scrollToSection("hero")}
                   className="hover:opacity-70 transition-opacity"
                 >
-                  <img src={logoImg} alt="PT" className="h-7 w-7 dark:invert" />
+                  <img src={logoImg} alt="Prem Patel" className="h-7 w-7 dark:invert" />
                 </button>
                 <div className="hidden md:flex items-center gap-6">
                   {/* <button
@@ -89,7 +89,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   className="text-sm bg-foreground text-background hover:bg-foreground/90 rounded-none"
                 >
                   <a
-                    href="https://github.com/parthtyagi9"
+                    href="https://github.com/prempatel6288-spec"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -151,7 +151,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   Contact
                 </button>
                 <a
-                  href="https://github.com/parthtyagi9"
+                  href="https://github.com/prempatel6288-spec"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block py-2 text-sm text-foreground"

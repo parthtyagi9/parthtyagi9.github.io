@@ -71,7 +71,7 @@ const ContactSection = () => {
             </a>
 
             <a
-              href="https://linkedin.com/in/prem-patel"
+              href="https://www.linkedin.com/in/prem-patel-b88a86319/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-4 border border-border hover:bg-muted transition-colors"
@@ -79,12 +79,12 @@ const ContactSection = () => {
               <Linkedin className="w-5 h-5 text-foreground" />
               <div>
                 <p className="text-foreground font-medium text-sm">LinkedIn</p>
-                <p className="text-muted-foreground text-sm">prem-patel</p>
+                <p className="text-muted-foreground text-sm">prem-patel-b88a86319</p>
               </div>
             </a>
 
             <a
-              href="https://github.com/prempatel6288"
+              href="https://github.com/prempatel6288-spec"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-4 border border-border hover:bg-muted transition-colors"
@@ -92,7 +92,7 @@ const ContactSection = () => {
               <Github className="w-5 h-5 text-foreground" />
               <div>
                 <p className="text-foreground font-medium text-sm">GitHub</p>
-                <p className="text-muted-foreground text-sm">prempatel6288</p>
+                <p className="text-muted-foreground text-sm">prempatel6288-spec</p>
               </div>
             </a>
 

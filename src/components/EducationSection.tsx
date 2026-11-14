@@ -20,19 +20,7 @@ const EducationSection = () => {
         "Relevant Coursework: Machine Learning, Data Structures, Statistical Modelling, Software Design, Regression Analysis",
         "UTM Co-op Internship Program (UTMCIP)"
       ]
-    },
-    {
-      institution: "UTM Robotics Club",
-      degree: "Software Developer",
-      field: "",
-      dates: "Sept 2024 – Present",
-      location: "Mississauga, ON",
-      logo: lseLogo,
-      courses: [
-        "Kobuki (TurtleBot): Configured ROS communication stack on Raspberry Pi for remote operation and working toward visual SLAM",
-        "Robot Arm: Designing 6-DOF robotic manipulator with 3D-printed parts, inverse kinematics, and OpenCV object detection"
-      ]
-    },
+    }
   ];
 
   return (

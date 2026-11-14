@@ -16,7 +16,7 @@ const Hero = () => {
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
                 Hi, I'm{" "}
                 <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-                  Parth Tyagi
+                  Prem Patel
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground">
@@ -59,7 +59,7 @@ const Hero = () => {
                 className="hover:bg-accent hover:text-primary transition-all duration-300"
                 asChild
               >
-                <a href="https://github.com/parthtyagi9" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/prempatel6288-spec" target="_blank" rel="noopener noreferrer">
                   <Github className="w-5 h-5" />
                 </a>
               </Button>
@@ -69,7 +69,7 @@ const Hero = () => {
                 className="hover:bg-accent hover:text-primary transition-all duration-300"
                 asChild
               >
-                <a href="https://linkedin.com/in/parth-tyagi45" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/prem-patel-b88a86319/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="w-5 h-5" />
                 </a>
               </Button>
@@ -79,7 +79,7 @@ const Hero = () => {
                 className="hover:bg-accent hover:text-primary transition-all duration-300"
                 asChild
               >
-                <a href="mailto:parthtyagi1204@gmail.com">
+                <a href="mailto:prem.patel@mail.utoronto.ca">
                   <Mail className="w-5 h-5" />
                 </a>
               </Button>

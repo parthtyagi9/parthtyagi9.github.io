@@ -16,53 +16,31 @@ const ProjectsSection = () => {
 
   const projects = [
     {
-      title: "AI-Powered Financial Insights Dashboard",
-      description: "End-to-end ML pipeline for revenue forecasting and churn prediction on large financial datasets. Automated data ingestion, optimized SQL queries, and interactive Tableau dashboards translating model outputs into business KPIs.",
-      tags: ["Python", "SQL", "Scikit-learn", "AWS", "Tableau"],
-      link: "https://github.com",
-      image: thetaStrikeImg,
-    },
-    {
-      title: "Team Task Tracker - GenAI Genesis Hackathon",
-      description: "Full-stack agile task management system deployed end-to-end. Built REST APIs, designed SQL schemas, implemented authentication, and deployed to AWS with CI/CD workflow.",
-      tags: ["Node.js", "Angular", "TypeScript", "AWS"],
-      link: "https://github.com",
-      image: wellthifyImg,
-    },
-    {
-      title: "Painting Classifier - ML Challenge",
-      description: "Evaluated 5 ML model families with advanced preprocessing and feature engineering. Diagnosed data quality issues, applied RobustScaler, and achieved 91% validation accuracy with Random Forest.",
-      tags: ["Python", "Scikit-learn", "NumPy", "Google Colab"],
-      link: "https://github.com",
+      title: "Self-Driving Car Motion Prediction",
+      description: "Matched published self-driving motion-prediction results on Waymo's real-world driving data by reproducing DONUT-NLL and benchmarking multi-agent interaction behavior across 14,573 scenes.",
+      tags: ["Python", "PyTorch", "Waymo", "Motion Prediction"],
+      link: "https://github.com/prempatel6288-spec/DONUT-NLL",
       image: shadowMonsterImg,
     },
     {
-      title: "Kobuki TurtleBot ROS Stack",
-      description: "Configured ROS communication stack on Raspberry Pi for remote operation of 8 TurtleBots. Integrated Xbox Kinect for sensor fusion, working toward visual SLAM for autonomous navigation.",
-      tags: ["ROS", "Python", "C++", "Raspberry Pi"],
-      link: "https://github.com",
-      image: scanalyticsImg,
+      title: "AI-Powered Financial Insights Dashboard",
+      description: "Built an end-to-end ML pipeline for revenue forecasting and churn prediction with automated ingestion, optimized SQL logic, and Tableau dashboards that translate model outputs into business KPIs.",
+      tags: ["Python", "SQL", "Scikit-learn", "AWS", "Tableau"],
+      link: "https://github.com/prempatel6288-spec/financial-insights-dashboard",
+      image: thetaStrikeImg,
     },
     {
-      title: "6-DOF Robotic Arm with Inverse Kinematics",
-      description: "Designing 6-DOF manipulator from 3D-printed parts with DS3240 servo motors. Implementing inverse kinematics via Arduino and integrating Xbox Kinect + OpenCV for real-time object detection.",
-      tags: ["Arduino", "C", "OpenCV", "Fusion 360"],
-      link: "https://github.com",
-      image: unixShellImg,
-    },
-    {
-      title: "MLOps Pipeline & Model Monitoring",
-      description: "Automated data pipeline for AML feature engineering and model inference. Integrated SHAP for explainability, deployed scalable detection models with drift monitoring and reproducible outputs.",
-      tags: ["Python", "Pandas", "SHAP", "XGBoost", "AWS"],
-      link: "https://github.com",
-      image: arMuseumImg,
+      title: "Team Task Tracker",
+      description: "Delivered a full-stack task management system from concept to deployment with REST APIs, SQL schemas, and CI/CD-backed AWS hosting for a GenAI Genesis hackathon team.",
+      tags: ["Node.js", "Angular", "TypeScript", "SQL", "AWS"],
+      link: "https://github.com/prempatel6288-spec/Taskflow",
+      image: wellthifyImg,
     },
   ];
 
-  // Distribute into 3 columns for masonry matching the reference layout
-  const col1 = [projects[0], projects[3]]; // left
-  const col2 = [projects[1], projects[4]]; // center
-  const col3 = [projects[2], projects[5]]; // right
+  const col1 = [projects[0]];
+  const col2 = [projects[1]];
+  const col3 = [projects[2]];
 
   const renderCard = (project: typeof projects[0], index: number) => (
     <motion.a
@@ -167,7 +145,7 @@ const ProjectsSection = () => {
             asChild
             className="border-border hover:bg-muted rounded-none"
           >
-            <a href="https://github.com/parthtyagi9" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/prempatel6288-spec" target="_blank" rel="noopener noreferrer">
               Explore more
             </a>
           </Button>
@@ -179,7 +157,7 @@ const ProjectsSection = () => {
           transition={{ duration: 0.6, delay: 0.55 }}
           className="text-center text-foreground font-bold mt-20"
         >
-          15+ additional projects across AI, ML, systems, backend and full-stack development.
+          Featured work across AI, ML, systems, and full-stack development.
         </motion.p>
       </div>
     </section>

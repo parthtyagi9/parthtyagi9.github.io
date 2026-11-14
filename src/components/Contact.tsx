@@ -17,18 +17,18 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="grid md:grid-cols-3 gap-8">
             <a 
-              href="mailto:parthtyagi1204@gmail.com"
+             href="mailto:prem.patel@mail.utoronto.ca"
               className="flex flex-col items-center text-center p-8 rounded-lg hover:bg-accent transition-colors group"
             >
               <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 mb-4">
                 <Mail className="w-8 h-8" />
               </div>
               <h3 className="font-semibold text-lg mb-2">Email</h3>
-              <p className="text-muted-foreground">parthtyagi1204@gmail.com</p>
+             <p className="text-muted-foreground">prem.patel@mail.utoronto.ca</p>
             </a>
 
             <a 
-              href="https://linkedin.com/in/parth-tyagi45"
+             href="https://www.linkedin.com/in/prem-patel-b88a86319/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center text-center p-8 rounded-lg hover:bg-accent transition-colors group"
@@ -37,11 +37,11 @@ const Contact = () => {
                 <Linkedin className="w-8 h-8" />
               </div>
               <h3 className="font-semibold text-lg mb-2">LinkedIn</h3>
-              <p className="text-muted-foreground">linkedin.com/in/parth-tyagi45</p>
+             <p className="text-muted-foreground">linkedin.com/in/prem-patel-b88a86319</p>
             </a>
 
             <a 
-              href="https://github.com/parthtyagi9"
+             href="https://github.com/prempatel6288-spec"
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center text-center p-8 rounded-lg hover:bg-accent transition-colors group"
@@ -50,7 +50,7 @@ const Contact = () => {
                 <Github className="w-8 h-8" />
               </div>
               <h3 className="font-semibold text-lg mb-2">GitHub</h3>
-              <p className="text-muted-foreground">github.com/parthtyagi9</p>
+             <p className="text-muted-foreground">github.com/prempatel6288-spec</p>
             </a>
           </div>
         </div>
